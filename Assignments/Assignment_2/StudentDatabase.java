@@ -35,14 +35,47 @@ public class StudentDatabase {
     }
 
     public void printStudentByID(String ID){
+        Student student = this.findByID(ID);
+        if( student == null ){
+            System.out.println("STUDENT NOT FOUND WITH ID: " + ID + "!\n");
+        } else {
+            System.out.println("\nSTUDENT FOUND!");
+            student.printInfo();
+            System.out.println();
+        }
+    }
+    public Student findByID(String ID){
         for (Student student : studentList) {
             if( ID.equals(student.getID())){
-                System.out.println("\nSTUDENT FOUND!");
-                student.printInfo();
-                System.out.println();
-                return;
+                return student;
             }
         }
-        System.out.println("STUDENT NOT FOUND WITH ID: " + ID + "!\n");
+        return null;
+    }
+    public void removeStudent(String ID){
+        Student student = this.findByID(ID);
+        if( student == null ){
+            System.out.println("STUDENT NOT FOUND WITH ID: " + ID + "!\n");
+        } else {
+            studentList.remove(student);
+            System.out.println(ID + " Deleted!\n");
+        }
+    }
+    public void removeStudent(Student student){
+        if( student == null ){
+            System.out.println("STUDENT NOT FOUND\n");
+        } else {
+            studentList.remove(student);
+            System.out.println(student.getID() + " Deleted!\n");
+        }
+    }
+
+    public void updateStudent(Student student){
+        for (Student myStudent : studentList) {
+            if( myStudent.getID().equals(student.getID())){
+                myStudent.setName(student.getName());
+                myStudent.setGrades(student.getGrades());
+            }
+        }
     }
 }

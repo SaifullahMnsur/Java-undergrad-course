@@ -65,7 +65,7 @@ public class Student {
             System.out.println("ID: " + this.getID());
             System.out.println("Name: " + this.getName());
             this.printGrade(this.getGrades());
-            System.out.println("GPA: " + this.getGpa() + "\n");
+            System.out.println("GPA: " + String.format("%.3f", this.getGpa()) + "\n");
     }
 
     // setGrades method overloading
@@ -94,5 +94,8 @@ public class Student {
     
     public double getGpa(){
         return gpa;
+    }
+    public void setName(String name){
+        this.name = name;
     }
 }
