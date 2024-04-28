@@ -3,6 +3,7 @@ import java.util.Collections;
 
 public class StudentDatabase {
     private ArrayList<Student> studentList;
+    
     // constructors
     public StudentDatabase() {
         this.studentList = new ArrayList<>();
@@ -19,37 +20,25 @@ public class StudentDatabase {
     public void addStudent(Student student){
         studentList.add(student);
     }
-
-    private void displayGrades(ArrayList<Double> grades){
-        System.out.print("Grades: ");
-        for (Double grade : grades) {
-            System.out.print(grade + " ");
-        }
-        System.out.println();
-    }
-    private void displayStudent(Student student){
-            System.out.println("ID: " + student.getID());
-            System.out.println("Name: " + student.getName());
-            this.displayGrades(student.getGrades());
-            System.out.println("GPA: " + student.getGPA() + "\n");
-    }
-    public void displayAllStudents(){
+    
+    public void printAllStudents(){
         System.out.println();
         if( studentList.isEmpty() ){
             System.out.println("NO STUDENTS FOUND IN THE DATABASE\n");
+            return;
         } else {
             System.out.println("SHOWING ALL STUDENTS' INFORMATIONS\n" );
         }
         for( Student student : studentList ){
-            displayStudent(student);
+            student.printInfo();
         }
-        System.out.println();
     }
-    public void displayStudentByID(String ID){
+
+    public void printStudentByID(String ID){
         for (Student student : studentList) {
             if( ID.equals(student.getID())){
                 System.out.println("\nSTUDENT FOUND!");
-                displayStudent(student);
+                student.printInfo();
                 System.out.println();
                 return;
             }
