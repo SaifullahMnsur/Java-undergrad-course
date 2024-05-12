@@ -35,10 +35,4 @@ public class Item {
     public void setQuantity(int quantity){
         this.quantity = quantity;
     }
-    public void addQuantity(int quantity){
-        this.quantity += quantity;
-    }
-    public void reduceQuantity(int quantity){
-        this.quantity -= quantity;
-    }
 }
