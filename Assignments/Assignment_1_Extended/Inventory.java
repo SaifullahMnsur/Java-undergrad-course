@@ -1,6 +1,11 @@
 import java.util.*;
 
 public class Inventory {
+
+    // The static main method is defined at the end of this code
+
+
+    // private properties
     private ArrayList<Item> itemList;
     private static Scanner sc = new Scanner(System.in);
 
@@ -31,16 +36,19 @@ public class Inventory {
         return;
     }
 
+    // show head row of table
     public void displayHeadRow(){
         System.out.printf("%15s %10s  %-10s %8s%n", "Name", "Type", "Price(BDT)", "Quantity");
         return;
     }
     
+    // Show rows of table
     public void displaySingleItem(Item item){
         System.out.printf("%15s %10s  %-8.2f %8d%n", item.getName(), item.getType(), item.getPrice(), item.getQuantity());
         return;
     }    
 
+    // Show all items in the inventory
     public void displayItems(){
         if( itemList.isEmpty() ){
             System.out.println("Empty inventory!");
@@ -53,6 +61,7 @@ public class Inventory {
         return;
     }
 
+    // Show all item of desired catagory type
     public void catagoryWiseDisplay(String type){
         if( itemList.isEmpty() ){
             System.out.println("Empty inventory of " + type + " type!");
@@ -73,6 +82,7 @@ public class Inventory {
         return;
     }
 
+    // Search item with given name
     public Item searchItem(String name){
         for (Item item : itemList) {
             if(item.getType().toLowerCase().contains(name.toLowerCase()) || name.toLowerCase().contains(item.getName().toLowerCase())){
@@ -82,6 +92,7 @@ public class Inventory {
         return null;
     }
 
+    // Purchase item of given name
     public void purchaseItem(String name, int quantity){
         Item item = searchItem(name);
         if( item == null ){
@@ -99,6 +110,7 @@ public class Inventory {
         }
     }
 
+    // Sell item of given name
     public void sellItem(String name, int quantity){
         Item item = searchItem(name);
         if( item == null ){
@@ -134,6 +146,8 @@ public class Inventory {
             }
         }
     }
+
+    // main method
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         int choice = 0;
