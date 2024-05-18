@@ -1,5 +1,3 @@
-package src;
-
 public class Item {
     // properties
     private String name, type;
