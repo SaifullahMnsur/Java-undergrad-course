@@ -58,10 +58,10 @@ public class Task2 {
 
         // FileWriter Class
         System.out.println("\n------Using FileWriter Class------\n");
-        try {            // opening files
+        try {
+            // opening files
             FileInputStream file1 = new FileInputStream("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File1.txt");
             FileInputStream file2 = new FileInputStream("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File2.txt");
-            FileWriter file3Out = new FileWriter("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File3_FW.txt");
 
             // calculating size of file 1, 2
             int sizeFile1 = file1.available()/2;
@@ -75,20 +75,38 @@ public class Task2 {
             file2.skip(sizeFile2);
             file2.read(file2bytes, 0, sizeFile2);
 
+            // closing files
+            file1.close();
+            file2.close();
+
+            // opening files
+            file1 = new FileInputStream("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File1.txt");
+            file2 = new FileInputStream("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File2.txt");
+            FileWriter file3Out = new FileWriter("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File3_FW.txt");
+
+            // Copying from file 1
             int ch;
+            System.out.print("Copying from file1: ");
             for( int i = 0 ; i < sizeFile1 && (ch = file1.read()) != -1; i++ ){
+                System.out.print((char)ch);
                 file3Out.append((char)ch);
             }
+            file3Out.append('\n');
+            
+            // Copying from file 2
+            System.out.print("\nCopying from file2: ");
             boolean write = false;
             for( int i = 0 ; i < sizeFile2*2 && (ch = file2.read()) != -1; i++ ){
                 if( i == sizeFile2 ){
                     write = true;
                 }
                 if( write ){
+                    System.out.print((char)ch);
                     file3Out.append((char)ch);
                 }
             }
-
+            System.out.println();
+            
             // closing files
             file1.close();
             file2.close();
