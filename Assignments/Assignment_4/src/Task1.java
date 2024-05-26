@@ -1,9 +1,15 @@
 import java.io.FileInputStream;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Task1{
+    public static void printBytes(byte[] bytes ){
+        for( int i = 0 ; i < bytes.length ; i++ ){
+            System.out.print(bytes[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -18,7 +24,8 @@ public class Task1{
             // read first n bytes
             byte[] file1bytes = new byte[n];
             file1.read(file1bytes);
-            System.out.println("First " + n + " bytes: " + file1bytes);
+            System.out.print("First " + n + " bytes: ");
+            printBytes(file1bytes);
             file1.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,13 +61,6 @@ public class Task1{
 
         System.out.println();
         System.out.println();
-        
-        // User input to end the program
-        try {
-            System.in.read();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         sc.close();
     }
     

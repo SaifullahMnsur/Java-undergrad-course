@@ -4,6 +4,13 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class Task2 {
+    public static void printBytes(byte[] bytes ){
+        for( int i = 0 ; i < bytes.length ; i++ ){
+            System.out.print(bytes[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -28,8 +35,10 @@ public class Task2 {
             file2.read(file2bytes, 0, sizeFile2);
 
             // First n bytes of file 1, 2
-            System.out.println(file1bytes);
-            System.out.println(file2bytes);
+            System.out.println("First half of File1: ");
+            Task2.printBytes(file1bytes);
+            System.out.println("Last half of File2: ");
+            Task2.printBytes(file2bytes);
             
             // reading files
             file3Out.write(file1bytes);
@@ -46,7 +55,8 @@ public class Task2 {
             FileInputStream file3In = new FileInputStream("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File3.txt");
 
             // printing file3
-            System.out.println("\nFile3: " + file3In.readAllBytes());
+            System.out.print("\nFile3: ");
+            Task2.printBytes(file3In.readAllBytes());
             System.out.println();
 
             // closing file 3
