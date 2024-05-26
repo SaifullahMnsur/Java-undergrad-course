@@ -1,17 +1,19 @@
 public class Truck extends Vehicle{
-    private int tyres, load;
-    public Truck(String brand, String model, int year, int tyres, int load) {
-        super(brand, model, year);
-        this.tyres = tyres;
+    private int wheels, load;
+    private static String vehicleType = "Truck";
+
+    public Truck(String brand, String model, int year, double price,  int wheels, int load) {
+        super(brand, model, year, price);
+        this.wheels = wheels;
         this.load = load;
     }
 
-    public int getTyres() {
-        return tyres;
+    public int getWheels() {
+        return wheels;
     }
 
-    public void setTyres(int tyres) {
-        this.tyres = tyres;
+    public void setWheels(int wheels) {
+        this.wheels = wheels;
     }
 
     public int getLoad() {
@@ -24,10 +26,14 @@ public class Truck extends Vehicle{
 
     @Override
     public void displayVehicleDetails() {
-        System.out.println("Vehicle type: Truck");
-        super.displayVehicleDetails();
+        System.out.println("Vehicle type: " + Truck.vehicleType );
+        super.displayVehicleDetails(); // calling super class method
         System.out.println("Load: " +  this.getLoad() + " Ton");
-        System.out.println("Tyre: " +  this.getTyres());
-        System.out.println();
+        System.out.println("Wheels: " +  this.getWheels());
+    }
+
+    @Override
+    public String getVehicleType(){
+        return Truck.vehicleType;
     }
 }
