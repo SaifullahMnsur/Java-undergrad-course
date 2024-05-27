@@ -4,12 +4,6 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class Task2 {
-    public static void printBytes(byte[] bytes ){
-        for( int i = 0 ; i < bytes.length ; i++ ){
-            System.out.print(bytes[i] + " ");
-        }
-        System.out.println();
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -36,13 +30,13 @@ public class Task2 {
 
             // First n bytes of file 1, 2
             System.out.println("First half of File1: ");
-            Task2.printBytes(file1bytes);
+            CommonMethods.printBytes(file1bytes);
             System.out.println("Last half of File2: ");
-            Task2.printBytes(file2bytes);
+            CommonMethods.printBytes(file2bytes);
             
             // reading files
             file3Out.write(file1bytes);
-            file3Out.write('\n');
+            file3Out.write(' ');
             file3Out.write(file2bytes);
 
             // closing files
@@ -56,7 +50,7 @@ public class Task2 {
 
             // printing file3
             System.out.print("\nFile3: ");
-            Task2.printBytes(file3In.readAllBytes());
+            CommonMethods.printBytes(file3In.readAllBytes());
             System.out.println();
 
             // closing file 3
@@ -101,7 +95,7 @@ public class Task2 {
                 System.out.print((char)ch);
                 file3Out.append((char)ch);
             }
-            file3Out.append('\n');
+            file3Out.append(' ');
             
             // Copying from file 2
             System.out.print("\nCopying from file2: ");

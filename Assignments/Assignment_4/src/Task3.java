@@ -3,12 +3,6 @@ import java.io.FileInputStream;
 import java.util.Scanner;
 
 public class Task3 {
-    public static void printBytes(byte[] bytes ){
-        for( int i = 0 ; i < bytes.length ; i++ ){
-            System.out.print(bytes[i] + " ");
-        }
-        System.out.println();
-    }
     public static void main(String[] args) {
         File file = new File("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File3_FOS.txt");
         System.out.println("Name: " + file.getName());
@@ -25,7 +19,7 @@ public class Task3 {
             FileInputStream fis = new FileInputStream(file);
             fis.read(fileBytes);
             System.out.print("First " + n + " bytes: ");
-            printBytes(fileBytes);
+            CommonMethods.printBytes(fileBytes);
             fis.close();
         } catch (Exception e) {
             e.printStackTrace();
