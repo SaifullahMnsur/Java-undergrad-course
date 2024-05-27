@@ -8,7 +8,7 @@ public class Task_2_fos {
         String file2Path = "..\\files\\File2.txt";
         String file3Path = "..\\files\\File3_FOS.txt";
 
-        // File input stream to read data from File1.txt and File2.txt
+        // Open File1 and File2 using file input stream to read / take input from
         FileInputStream fis1 = new FileInputStream(file1Path);
         FileInputStream fis2 = new FileInputStream(file2Path);
         
@@ -28,7 +28,7 @@ public class Task_2_fos {
         // read the last half of file2
         fis2.read(buffer2);
         
-        // open file3 with File output stream to write the data
+        // open file3 using file output stream to write / give output into
         FileOutputStream fos = new FileOutputStream(file3Path);
         // write the data
         fos.write(buffer1);
@@ -38,19 +38,20 @@ public class Task_2_fos {
         fis1.close();
         fis2.close();
         fos.close();
-        // writing first half of file1.txt and last half of file2.txt into file3.txt is completed
+
+        // writing first half of file1 and last half of file2 into file3 is completed
         System.out.println("C O M P L E T E D");
 
 
 
-        // Reopen the file3.txt with File input stream object to print
+        // Reopen file3 using File input stream to read / take input from
         FileInputStream fis = new FileInputStream(file3Path);
         // byte array for byte streaming
         byte []buffer = new byte[fis.available()];
         // read data
         fis.read(buffer);
 
-        // print file3.txt
+        // print file3
         System.out.print("File 3: ");
         for (byte b : buffer) {
             System.out.print((char)b);

@@ -7,7 +7,7 @@ public class Task_2_fw {
         String file2Path = "..\\files\\File2.txt";
         String file3Path = "..\\files\\File3_FW.txt";
 
-        // file reader objects
+        // Open file1 and file2 using File reader to read / take input from
         FileReader fr1 = new FileReader(file1Path);
         FileReader fr2 = new FileReader(file2Path);
         
@@ -41,7 +41,7 @@ public class Task_2_fw {
         // read the last half of file2
         fr2.read(buffer2);
 
-        // open file3.txt with file writer object to write the data into it
+        // open file3 using file writer to write / give output into
         FileWriter fw = new FileWriter(file3Path);
         // write the data into file3.txt
         fw.write(buffer1);
@@ -51,11 +51,12 @@ public class Task_2_fw {
         fr1.close();
         fr2.close();
         fw.close();
+        
         // writing first half of file1.txt and last half of file2.txt into file3.txt is completed
         System.out.println("C O M P L E T E D");
 
 
-        // reopen file3 as file reader object to print
+        // Open file3 using file reader to read / take input from
         FileReader fr = new FileReader(file3Path);
         // calculate file size
         int file3Size = 0;
@@ -65,7 +66,8 @@ public class Task_2_fw {
         // close file as the pointer is at the end
         fr.close();
 
-        // reopen the file to get the pointer from begining
+        // to start from the beginning
+        // Reopen file3 using file reader to read / take input from
         fr = new FileReader(file3Path);
         // char array for charecter streaming
         char []buffer = new char[file3Size];

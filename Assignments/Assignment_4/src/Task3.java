@@ -1,10 +1,10 @@
 import java.io.File;
-import java.io.FileInputStream;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-        File file = new File("X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\File3_FOS.txt");
+        File file = new File("..\\files\\File3_FOS.txt");
         System.out.println("Name: " + file.getName());
         System.out.println("Size: " + file.length());
         System.out.println("Last Modified: " + file.lastModified());
@@ -13,13 +13,16 @@ public class Task3 {
         System.out.println("Parent: " + file.getParent());
 
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        byte[] fileBytes = new byte[(int)file.length()];
+        long fileSize = file.length();
         try {
-            FileInputStream fis = new FileInputStream(file);
-            fis.read(fileBytes);
+            FileReader fis = new FileReader(file);
+            int n = (int) (fileSize/2);
+            char []buffer = new char[n];
+            fis.read(buffer);
             System.out.print("First " + n + " bytes: ");
-            CommonMethods.printBytes(fileBytes);
+            for (char c : buffer) {
+                System.out.print(c);
+            }
             fis.close();
         } catch (Exception e) {
             e.printStackTrace();

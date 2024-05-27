@@ -5,7 +5,7 @@ public class Task_1_fis{
         // File path
         String filePath = "..\\files\\sample.txt";
         
-        // open using File Input Stream
+        // open file using file input stream to read / take input from
         FileInputStream fis = new FileInputStream(filePath);
 
         // Get the file size
