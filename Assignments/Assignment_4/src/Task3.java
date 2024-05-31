@@ -7,10 +7,14 @@ public class Task3 {
         File file = new File("..\\files\\File3_FOS.txt");
         System.out.println("Name: " + file.getName());
         System.out.println("Size: " + file.length());
-        System.out.println("Last Modified: " + file.lastModified());
+        System.out.println("Is it a file: " + (file.isFile() ? "YES" : "NO"));
         System.out.println("Path: " + file.getPath());
+        System.out.println("Last Modified: " + file.lastModified());
         System.out.println("Absolute Path: " + file.getAbsolutePath());
         System.out.println("Parent: " + file.getParent());
+        System.out.println("Parent File: " + file.getParentFile());
+        System.out.println("Total space: " + file.getTotalSpace());
+        
 
         Scanner sc = new Scanner(System.in);
         long fileSize = file.length();
