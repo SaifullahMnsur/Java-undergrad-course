@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Random;
 
-public class Task4 {
+public class Task_4 {
     public static void main(String[] args) {
         String filePath = "X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\random_access.txt";
 

@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class Task3 {
+public class Task_3 {
     public static void main(String[] args) {
         File file = new File("..\\files\\File3_FOS.txt");
         System.out.println("Name: " + file.getName());

@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Inventory inventory1 = new Inventory();
-        inventory1.addItem("Sweet Gourd", "Fruit", 35.0);
-        inventory1.addItem("White Pears", "Fruit", 350.0);
+        inventory1.addItem(new Item("Sweet Gourd", "Fruit", 35.0));
+        inventory1.addItem(new Item("White Pears", "Fruit", 350.0));
         System.out.println();
         inventory1.displayItems();
         System.out.println();

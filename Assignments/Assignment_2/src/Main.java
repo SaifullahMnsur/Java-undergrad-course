@@ -37,7 +37,7 @@ public class Main {
                     System.out.println("Incorrect input! try again!");
                     break;
             }
-        } while (choice != 6);
+        } while (choice != 5);
         sc.close();
     }
 
