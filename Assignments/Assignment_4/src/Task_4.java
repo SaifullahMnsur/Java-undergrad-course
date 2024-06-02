@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Task_4 {
     public static void main(String[] args) {
-        String filePath = "X:\\Java-undergrad-course\\Assignments\\Assignment_4\\files\\random_access.txt";
+        String filePath = "..\files\\random_access.txt";
 
         try {
             FileOutputStream fos = new FileOutputStream(filePath);
