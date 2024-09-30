@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 public class Task_1_fis{
     public static void main(String[] args) throws Exception{
         // File path
-        String filePath = "..\\files\\sample.txt";
+        String filePath = ".\\text-files\\sample.txt";
         
         // open file using file input stream to read / take input from
         FileInputStream fis = new FileInputStream(filePath);

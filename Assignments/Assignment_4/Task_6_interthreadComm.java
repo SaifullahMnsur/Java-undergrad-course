@@ -2,19 +2,6 @@ import java.util.Scanner;
 
 public class Task_6_interthreadComm {
     public static void main(String[] args) {
-        // Counter counter = new Counter();
-        // Thread incThread = new Thread(() -> counter.increament("Thread 1"));
-        // Thread decThread = new Thread(() -> counter.decreament("Thread 2"));
-        // incThread.start();
-        // decThread.start();
-        // try {
-        //     incThread.join();
-        //     decThread.join();
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
-        // System.out.println("Final count: " + counter.getCount());
-
         Chat chat = new Chat();
         new Questioner(chat);
         new Answerer(chat);

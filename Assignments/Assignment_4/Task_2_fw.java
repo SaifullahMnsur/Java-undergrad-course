@@ -3,9 +3,9 @@ import java.io.FileWriter;
 public class Task_2_fw {
     public static void main(String[] args) throws Exception {
         // File paths
-        String file1Path = "..\\files\\File1.txt";
-        String file2Path = "..\\files\\File2.txt";
-        String file3Path = "..\\files\\File3_FW.txt";
+        String file1Path = ".\\text-files\\File1.txt";
+        String file2Path = ".\\text-files\\File2.txt";
+        String file3Path = ".\\text-files\\File3_FW.txt";
 
         // Open file1 and file2 using File reader to read / take input from
         FileReader fr1 = new FileReader(file1Path);

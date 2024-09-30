@@ -2,7 +2,7 @@ import java.io.FileReader;
 
 public class Task_1_fr {
     public static void main(String[] args) throws Exception{
-        String filePath = "..\\files\\sample.txt";
+        String filePath = ".\\text-files\\sample.txt";
         
         // Open file using filereader to read / take input from
         FileReader fr = new FileReader(filePath);

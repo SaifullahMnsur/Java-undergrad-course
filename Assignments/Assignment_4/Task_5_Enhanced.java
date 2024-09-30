@@ -17,7 +17,7 @@ public class Task_5_Enhanced {
     public static void main(String[] args) {
         
         // Create a task object with a parameter of sleep time
-        Task task = new Task(100);
+        Task task = new Task(931);
         
         // pass the functions to run in each thread
         Thread t1 = new Thread(task::calChars);
@@ -101,8 +101,8 @@ public class Task_5_Enhanced {
 
 class Task{
     public boolean isCharCompleted = false, isAtCompleted = false, isIntCompleted = false;
-    public int currInt, sleepTime;
-    public char currChar, currAt;
+    public int currInt = 1, sleepTime;
+    public char currChar = 'A', currAt = '@';
     public long charDuration, atDuration, intDuration;
 
     public Task(int sleepTime) {

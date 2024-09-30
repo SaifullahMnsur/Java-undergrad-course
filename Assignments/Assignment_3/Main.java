@@ -9,16 +9,16 @@ public class Main {
         Motorcycle motorcycle1 = new Motorcycle("Suzuki", "Hayabusa", 2021, 14449.99, 1340, 150.0);
         Motorcycle motorcycle2 = new Motorcycle("Hero", "Splendor", 2016, 4449.99, 100, 8.5);
 
-        // System.out.println("Using method overloading\n");
-        // // Using method overloading
-        // displayVehicleDetails(car1);
-        // displayVehicleDetails(car2);
+        System.out.println("Using method overloading\n");
+        // Using method overloading
+        displayVehicleDetails(car1);
+        displayVehicleDetails(car2);
         
-        // displayVehicleDetails(truck1);
-        // displayVehicleDetails(truck2);
+        displayVehicleDetails(truck1);
+        displayVehicleDetails(truck2);
         
-        // displayVehicleDetails(motorcycle1);
-        // displayVehicleDetails(motorcycle2);
+        displayVehicleDetails(motorcycle1);
+        displayVehicleDetails(motorcycle2);
         
         
         System.out.println("Using method overriding of parent class\n");

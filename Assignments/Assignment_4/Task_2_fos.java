@@ -4,9 +4,9 @@ import java.io.FileOutputStream;
 public class Task_2_fos {
     public static void main(String[] args) throws Exception {
         // File paths
-        String file1Path = "..\\files\\File1.txt";
-        String file2Path = "..\\files\\File2.txt";
-        String file3Path = "..\\files\\File3_FOS.txt";
+        String file1Path = ".\\text-files\\File1.txt";
+        String file2Path = ".\\text-files\\File2.txt";
+        String file3Path = ".\\text-files\\File3_FOS.txt";
 
         // Open File1 and File2 using file input stream to read / take input from
         FileInputStream fis1 = new FileInputStream(file1Path);

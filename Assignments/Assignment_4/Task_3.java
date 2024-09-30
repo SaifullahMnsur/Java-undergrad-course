@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Task_3 {
     public static void main(String[] args) {
-        File file = new File("..\\files\\File3_FOS.txt");
+        File file = new File(".\\text-files\\File3_FOS.txt");
         System.out.println("Name: " + file.getName());
         System.out.println("Size: " + file.length());
         System.out.println("Is it a file: " + (file.isFile() ? "YES" : "NO"));
