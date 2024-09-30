@@ -5,5 +5,5 @@ In this assignment we practice the basics of OOP by using object based propertie
 
 ## Assignment Description
 ### Task-1
-In this assignment we design a basic inventory system which can record the data of purchasing and selling items of a business entity.
+We were asked to design a basic inventory system which can record the data of purchasing and selling items of a business entity.
 **Some extra facilities are asked to add with the Assignment-1**
