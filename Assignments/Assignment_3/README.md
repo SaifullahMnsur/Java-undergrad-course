@@ -1,7 +1,7 @@
 # Assignment-3: Inheritence in Object Oriented Programming
 
 ## Objective
-In this assignment we practice the basics of OOP by using object based properties and methods. How to use basic concept of OOP and use it in a real life scenerio.
+In this assignment we practice the inheritence concept of OOP and method overloading in a real life scenerio.
 
 ## Assignment Description
 ### Task-1
