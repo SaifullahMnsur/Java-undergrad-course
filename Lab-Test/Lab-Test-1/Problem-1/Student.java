@@ -33,12 +33,12 @@ public class Student {
     }
 
     // Sends a string while converting the object to string
-    // or Send a string while printing the object from inside any print method
+    // or Sends a string while printing the object from inside any print method
     @Override
     public String toString() {
-        return "Name: " + name + "\n" + 
-               "Age: " + age + "\n" +
-               "Grade: " + grade;
+        return "Name: " + this.name + "\n" + 
+               "Age: " + this.age + "\n" +
+               "Grade: " + this.grade;
     }
 
 
