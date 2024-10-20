@@ -11,6 +11,7 @@ public class Student2 extends Student {
         this.finalGrade = 0.0;
     }
 
+    // calculates the final grade
     public double calculateFinalGrade(int[] marks) {
         int totalMarks = 0;
         for (int mark : marks) {
@@ -20,6 +21,10 @@ public class Student2 extends Student {
         return this.finalGrade;
     }
 
+    // calculates if the student has passed or failed!
+    // as the the final grade is sent as parameter
+    // hence the method is not object dependednt
+    // that is why I made the method static
     public static boolean checkPassStatus(double finalGrade) {
         return finalGrade >= 50.0;
     }
