@@ -31,6 +31,9 @@ public class Student {
     public String getGrade() {
         return grade;
     }
+
+    // Sends a string while converting the object to string
+    // or Send a string while printing the object from inside any print method
     @Override
     public String toString() {
         return "Name: " + name + "\n" + 
@@ -45,6 +48,7 @@ public class Student {
         int age = 22;
         String grade = "A";
 
+        // Using non-parameterized constructor
         System.out.println("=".repeat(50));
         System.out.println("Non-parameterized Example:");
         System.out.println("-".repeat(50));
@@ -58,9 +62,10 @@ public class Student {
         
         System.out.println("-".repeat(50));
         System.out.println("Student's Information:");
-        System.out.println(student1);
+        System.out.println(student1); // prints the information sent from toString() method
         System.out.println("=".repeat(50));
 
+        // Using parameterized constructor
         System.out.println("=".repeat(50));
         System.out.println("Parameterized Example:");
         System.out.println("-".repeat(50));
@@ -70,7 +75,7 @@ public class Student {
 
         System.out.println("-".repeat(50));
         System.out.println("Student's Information:");
-        System.out.println(student2);
+        System.out.println(student2); // prints the information sent from toString() method
         System.out.println("=".repeat(50));
     }
 }
