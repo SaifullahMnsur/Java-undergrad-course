@@ -39,7 +39,7 @@ public class Student {
     }
 
 
-
+    // Static main method to test instance of this class
     public static void main(String[] args) {
         String name = "Saifullah";
         int age = 22;
@@ -60,7 +60,7 @@ public class Student {
         System.out.println("Student's Information:");
         System.out.println(student1);
         System.out.println("=".repeat(50));
-        
+
         System.out.println("=".repeat(50));
         System.out.println("Parameterized Example:");
         System.out.println("-".repeat(50));
