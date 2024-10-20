@@ -7,11 +7,14 @@ public class Student {
         this.age = -1;
         this.grade = "Not Yet Added!";
     }
+    
     public Student(String name, int age, String grade) {
         this.name = name;
         this.age = age;
         this.grade = grade;
     }
+    
+    // setters method
     public void setName(String name) {
         this.name = name;
     }
@@ -22,6 +25,7 @@ public class Student {
         this.grade = grade;
     }
 
+    // getters method
     public String getName() {
         return name;
     }
